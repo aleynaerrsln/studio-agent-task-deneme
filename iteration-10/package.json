@@ -1,0 +1,17 @@
+{
+  "name": "studio-agent",
+  "version": "0.2.0",
+  "description": "Knowledge-base -> artifact compiler (iteration 1: executive-memo + visual-abstract)",
+  "type": "module",
+  "bin": {
+    "studio-agent": "./bin/studio-agent.mjs"
+  },
+  "scripts": {
+    "compile": "node bin/studio-agent.mjs compile --source knowledge-base.md --out output",
+    "list": "node bin/studio-agent.mjs list"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

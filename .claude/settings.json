@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const j = JSON.parse\\(require\\('fs'\\).readFileSync\\('output/graphical-abstract.json','utf8'\\)\\); console.log\\('rules_checked:', j._metadata.lint.rules_checked\\); console.log\\('errors:', j._metadata.lint.errors.length\\); console.log\\('warnings:', j._metadata.lint.warnings.length\\); console.log\\('interpreter_notes:'\\); for \\(const n of j._metadata.interpreter_notes\\) console.log\\(' -', n.slice\\(0, 120\\)\\);\")",
+      "Bash(TEST_CASE=A node bin/studio-agent.mjs compile --source knowledge-base.md --out output)",
+      "Bash(TEST_CASE=B node bin/studio-agent.mjs compile --source knowledge-base.md --out output)",
+      "Bash(TEST_CASE=C node bin/studio-agent.mjs compile --source knowledge-base.md --out output)",
+      "Bash(node -e ' *)",
+      "Bash(node --input-type=module -e ' *)",
+      "Bash(node bin/studio-agent.mjs compile --source knowledge-base.md --render html)",
+      "Bash(awk '/<body>/,/<\\\\/body>/' output/graphical-abstract.html)",
+      "Bash(node bin/studio-agent.mjs compile --source knowledge-base.md --out output --render html)",
+      "Bash(awk '/<section class=\"panels\"/,/<\\\\/section>/' output/graphical-abstract.html)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(git init *)"
+    ]
+  }
+}
